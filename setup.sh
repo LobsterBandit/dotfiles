@@ -20,7 +20,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 # docker and docker-compose?
 
-# yarn?
+# yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+
+# --no-install-recommends because of nvm
+apt update -y && apt install --no-install-recommends yarn
 
 # install zsh
 apt install zsh
