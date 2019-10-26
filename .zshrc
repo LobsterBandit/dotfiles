@@ -78,6 +78,7 @@ plugins=(
     node
     npm
     z
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -168,4 +169,3 @@ lerna() {
 # load dircolors
 eval `dircolors ~/.dircolors`
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh

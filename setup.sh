@@ -50,12 +50,7 @@ apt install zsh-syntax-highlighting
 # install zsh-autosuggestions
 # clone repo to here
 # link zsh-autosuggestiongs to $HOME
-sh -c "echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autosuggestions/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/shells:zsh-users:zsh-autosuggestions.list"
-wget -nv https://download.opensuse.org/repositories/shells:zsh-users:zsh-autosuggestions/xUbuntu_18.04/Release.key -O Release.key
-apt-key add - < Release.key
-apt update
-apt install zsh-autosuggestions
-rm Release.key
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # link .zshrc
 ln -rsfn .zshrc $HOME/.zshrc
